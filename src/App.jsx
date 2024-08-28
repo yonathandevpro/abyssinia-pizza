@@ -9,7 +9,7 @@ import CreateOrder, {
 import Order, { loader as orderLoader } from "./features/order/Order";
 import AppLayout from "./ui/AppLayout";
 
-// Necessary to create routers this way to enable data loading feature since version 6.4
+// Necessary to create routers this way to enable data loading feature and other modern features since version 6.4
 const router = createBrowserRouter([
   {
     element: (
