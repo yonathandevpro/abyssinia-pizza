@@ -1,5 +1,37 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./ui/Home";
+import Menu from "./features/menu/Menu";
+import Cart from "./features/cart/Cart";
+import CreateOrder from "./features/order/CreateOrder";
+import Order from "./features/order/Order";
+
+// Necessary to create routers this way to enable data loading feature since version 6.4
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+
+  {
+    path: "/menu",
+    element: <Menu />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
+  },
+  {
+    path: "/order/:orderId",
+    element: <Order />,
+  },
+  {
+    path: "/order/new",
+    element: <CreateOrder />,
+  },
+]);
+
 function App() {
-  return <div>Hello Vite!</div>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
